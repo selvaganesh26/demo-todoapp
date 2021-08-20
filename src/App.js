@@ -1,19 +1,16 @@
 import { React, useEffect } from 'react';
 import './App.scss';
-import context from './core/context';
+import AddButton from './components/addButton';
+import TextArea from './components/textArea';
 import SampleService from './services/sample';
-import SimpleButton from './components/simpleButton';
 
 const App = () => {
 	useEffect(SampleService.sayHai, []);
 
-	return (
-		<div className="App">
-			<div>Count: { context.state.count }</div>
-			<div>{ SimpleButton() }</div>
-			<div>Refresh ID: { context.state.refreshID }</div>
-		</div>
-	);
+	return <div className="App">
+		<div>{ TextArea() } </div>
+		<div>{ AddButton() } </div>
+	</div>;
 };
 
 export default App;
