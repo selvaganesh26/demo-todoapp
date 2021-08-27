@@ -1,9 +1,14 @@
-const increaseCount = ({ state, data }) => ({
-	count: state.count + data,
+const setInput = ({ data }) => ({
+	input: data,
+});
+
+const addTodo = ({ state }) => ({
+	todo: state.todo.concat(state.input),
 });
 
 const actions = {
-	increaseCount,
+	setInput,
+	addTodo,
 };
 
 export default actions;
