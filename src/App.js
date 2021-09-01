@@ -5,7 +5,7 @@ import AddButton from './components/addButton';
 import context from './core/context';
 import TextArea from './components/textArea';
 import SampleService from './services/sample';
-import Display from './components/display';
+import todoDisplay from './components/todoDisplay';
 const App = () => {
 	useEffect(SampleService.sayHai, []);
 	console.log(context.state);
@@ -13,7 +13,7 @@ const App = () => {
 	return <div className="App">
 		<div>{ TextArea() } </div>
 		<div>{ AddButton() } </div>
-		<span>Todo: {context.state.todo.map(Display)}</span>
+		<span>Todo: {context.state.todos.map(todoDisplay)}</span>
 	</div>;
 };
 
