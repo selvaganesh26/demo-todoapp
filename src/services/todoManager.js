@@ -12,9 +12,13 @@ const toggleTodo = (todos, data) =>
 			? todo
 			: { ...todo, isCompleted: !data.isCompleted }));
 
+const toggleAllTodos = (todos, ischecked) =>
+	todos.map((todo) => ({ ...todo, isCompleted: !ischecked }));
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
+	toggleAllTodos,
 };
 
 export default TodoManager;

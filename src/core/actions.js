@@ -12,10 +12,14 @@ const addTodo = ({ state }) => ({
 const toggleTodo = ({ state, data }) =>
 	({ todos: TodoManager.toggleTodo(state.todos, data) });
 
+const toggleAllTodos = ({ state, data }) =>
+	({ todos: TodoManager.toggleAllTodos(state.todos, data) });
+
 const actions = {
 	setInput,
 	addTodo,
 	toggleTodo,
+	toggleAllTodos,
 };
 
 export default actions;

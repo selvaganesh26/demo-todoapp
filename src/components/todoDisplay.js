@@ -1,12 +1,12 @@
 import { React } from 'react';
 import context from '../core/context';
-const todoDisplay = (todos) => <div key={ todos.id }>
+const todoDisplay = (todo) => <div key={ todo.id }>
 	<input
 		type="checkbox"
-		checked={ todos.isCompleted }
-		onChange={ () => context.actions.toggleTodo(todos) }
+		checked={ todo.isCompleted }
+		onChange={ () => context.actions.toggleTodo(todo) }
 	/>
-	<div>{ todos.text }</div>
+	<div>{ todo.text }</div>
 </div>;
 
 export default todoDisplay;
