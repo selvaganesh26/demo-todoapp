@@ -18,10 +18,17 @@ const toggleTodo = (todos, data) =>
 const toggleAllTodos = (todos, ischecked) =>
 	todos.map((todo) => ({ ...todo, isCompleted: !ischecked }));
 
+const getActiveChecked = (data) =>
+	data.filter((todo) => !todo.isCompleted).length;
+
+const getActiveTodos = (data) => data.length;
+
 const TodoManager = {
 	addTodo,
 	toggleTodo,
 	toggleAllTodos,
+	getActiveChecked,
+	getActiveTodos,
 };
 
 export default TodoManager;
