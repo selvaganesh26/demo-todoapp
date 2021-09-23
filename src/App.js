@@ -7,6 +7,7 @@ import TextArea from './components/textArea';
 import SampleService from './services/sample';
 import todoDisplay from './components/todoDisplay';
 import toggleAll from './components/toggleAlltodos';
+import clearCompleted from './components/clearCompleted';
 const App = () => {
 	useEffect(SampleService.sayHai, []);
 	console.log(context.state);
@@ -15,6 +16,7 @@ const App = () => {
 		<div>{ toggleAll() }{ TextArea() }  </div>
 		<div>{ AddButton() } </div>
 		<span>Todo: {context.state.todos.map(todoDisplay)}</span>
+		<div>{ clearCompleted() }</div>
 	</div>;
 };
 
