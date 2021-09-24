@@ -16,7 +16,7 @@ const App = () => {
 		<div>{ toggleAll() }{ TextArea() }  </div>
 		<div>{ AddButton() } </div>
 		<span>Todo: {context.state.todos.map(todoDisplay)}</span>
-		<div>{ clearCompleted() }</div>
+		<div>{ clearCompleted(context.state.todos) }</div>
 	</div>;
 };
 
