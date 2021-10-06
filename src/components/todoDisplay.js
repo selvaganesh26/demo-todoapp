@@ -6,7 +6,11 @@ const todoDisplay = (todo) => <div key={ todo.id }>
 		checked={ todo.isCompleted }
 		onChange={ () => context.actions.toggleTodo(todo) }
 	/>
-	<div>{ todo.text }</div>
+	<span>{ todo.text }</span>
+	<span>
+		<button	onClick={ () => context.actions.toDoRemoval(todo) }>
+			X</button>
+	</span>
 </div>;
 
 export default todoDisplay;

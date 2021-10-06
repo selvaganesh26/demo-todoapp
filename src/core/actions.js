@@ -16,12 +16,16 @@ const toggleAllTodos = ({ state, data }) =>
 const clearCompleted = ({ state }) =>
 	({ todos: TodoManager.clearCompleted(state.todos) });
 
+const removeTodo = ({ state, data }) =>
+	({ todos: TodoManager.removeTodo(state.todos, data) });
+
 const actions = {
 	setInput,
 	addTodo,
 	toggleTodo,
 	toggleAllTodos,
 	clearCompleted,
+	removeTodo,
 };
 
 export default actions;
