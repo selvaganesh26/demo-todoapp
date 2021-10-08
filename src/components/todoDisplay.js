@@ -8,7 +8,7 @@ const todoDisplay = (todo) => <div key={ todo.id }>
 	/>
 	<span>{ todo.text }</span>
 	<span>
-		<button	onClick={ () => context.actions.toDoRemoval(todo) }>
+		<button	onClick={ () => context.actions.removeTodo(todo) }>
 			X</button>
 	</span>
 </div>;
