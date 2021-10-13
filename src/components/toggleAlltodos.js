@@ -7,7 +7,7 @@ import TodoManager from '../services/todoManager';
 
 const toggleAll = () => {
 	const ischecked = TodoManager.getActiveChecked(context.state.todos) === 0;
-	const noToDos = TodoManager.getActiveTodos(context.state.todos) === 0;
+	const noToDos = TodoManager.getTodoCount(context.state.todos) === 0;
 
 	console.log(ischecked);
 	return noToDos

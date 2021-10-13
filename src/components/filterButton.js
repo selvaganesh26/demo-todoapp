@@ -3,7 +3,7 @@ import context from '../core/context';
 import TodoManager from '../services/todoManager';
 
 const filterButton = (filter) => {
-	const notodo = TodoManager.getActiveTodos(context.state.todos) === 0;
+	const notodo = TodoManager.getTodoCount(context.state.todos) === 0;
 
 	return notodo
 		? null
