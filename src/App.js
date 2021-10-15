@@ -9,6 +9,7 @@ import toggleAll from './components/toggleAlltodos';
 import clearCompleted from './components/clearCompleted';
 import filterBar from './components/filterBar';
 import todoList from './components/todoList';
+import editButton from './components/editButton';
 
 const App = () => {
 	useEffect(SampleService.sayHai, []);
@@ -16,7 +17,7 @@ const App = () => {
 
 	return <div className="App">
 		<div>{ toggleAll() }{ TextArea() }  </div>
-		<div>{ AddButton() }</div>
+		<div>{ AddButton() }{ editButton()}</div>
 		<span>Todo: { todoList() }</span>
 		<div>{ clearCompleted(context.state.todos) }</div>
 		<div>{ filterBar() }</div>
