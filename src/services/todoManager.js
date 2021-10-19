@@ -18,14 +18,14 @@ const toggleTodo = (todos, data) =>
 const toggleAllTodos = (todos, ischecked) =>
 	todos.map((todo) => ({ ...todo, isCompleted: !ischecked }));
 
-const getActiveChecked = (data) =>
+const getActiveCount = (data) =>
 	data.filter((todo) => !todo.isCompleted).length;
 
 const getTodoCount = (data) => data.length;
 
 const clearCompleted = (todos) => todos.filter((todo) => !todo.isCompleted);
 
-const clearCompletedCount = (todos) =>
+const getInactiveCount = (todos) =>
 	todos.filter((todo) => !todo.isCompleted).length;
 
 const removeTodo = (todos, data) =>
@@ -53,10 +53,10 @@ const TodoManager = {
 	addTodo,
 	toggleTodo,
 	toggleAllTodos,
-	getActiveChecked,
+	getActiveCount,
 	getTodoCount,
 	clearCompleted,
-	clearCompletedCount,
+	getInactiveCount,
 	removeTodo,
 	doFilter,
 	editTodo,
