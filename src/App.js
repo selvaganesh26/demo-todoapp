@@ -1,26 +1,18 @@
-/* eslint-disable no-console */
 import { React, useEffect } from 'react';
 import './App.scss';
-import context from './core/context';
-import TextArea from './components/textArea';
-import SampleService from './services/sample';
-import toggleAll from './components/toggleAlltodos';
-import clearCompleted from './components/clearCompleted';
-import filterBar from './components/filterBar';
-import todoList from './components/todoList';
-import actionButton from './components/actionButton';
+import TodoPane from './components/todoPane';
+import TaskManager from './services/taskManager.js';
+import TaskPane from './components/taskPane';
 
 const App = () => {
-	useEffect(SampleService.sayHai, []);
-	console.log(context.state);
+	useEffect(TaskManager.init, []);
 
-	return <div className="App">
-		<div>{ toggleAll() }{ TextArea() }  </div>
-		<div>{ actionButton() }</div>
-		<span>Todo: { todoList() }</span>
-		<div>{ clearCompleted(context.state.todos) }</div>
-		<div>{ filterBar() }</div>
-	</div>;
+	return (
+		<div className="App">
+			{ TodoPane() }
+			{ TaskPane() }
+		</div>
+	);
 };
 
 export default App;

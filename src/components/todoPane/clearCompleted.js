@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-closing-bracket-location */
 import { React } from 'react';
-import context from '../core/context';
-import TodoManager from '../services/todoManager';
+import context from '../../core/context';
+import TodoManager from '../../services/todoManager';
 
 const clearCompleted = (todos) => {
 	const notCompleted

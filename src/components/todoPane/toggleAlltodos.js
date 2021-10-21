@@ -2,8 +2,8 @@
 /* eslint-disable indent */
 /* eslint-disable no-mixed-spaces-and-tabs */
 import { React } from 'react';
-import context from '../core/context';
-import TodoManager from '../services/todoManager';
+import context from '../../core/context';
+import TodoManager from '../../services/todoManager';
 
 const toggleAll = () => {
 	const ischecked = TodoManager.getActiveCount(context.state.todos) === 0;

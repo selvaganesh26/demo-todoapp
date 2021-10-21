@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { React } from 'react';
-import context from '../core/context';
+import context from '../../core/context';
 
 const getEnterkeyAction = () => (context.state.editing
 	? 'editTodo'
