@@ -1,10 +1,10 @@
 import config from '../core/config';
 import { rndString } from '@laufire/utils/random';
 
-const addTodo = (state) =>
+const addTodo = (todos, input) =>
 	({
-		todos: state.todos.concat({ id: rndString(config.refreshIDLength),
-			text: state.input,
+		todos: todos.concat({ id: rndString(config.refreshIDLength),
+			text: input,
 			isCompleted: false }),
 		input: '',
 	});
