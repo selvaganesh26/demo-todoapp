@@ -4,10 +4,10 @@ import context from '../../core/context';
 const removeButton = (task) =>
 	<button onClick={ () => context.actions.removeTask(task) }>X</button>;
 
-const addButton = () =>
+const addButton = (task) =>
 	<button onClick={ () => {
-		// context.actions.addTaskTodo(task) ;
-		// context.actions.removeTask(task);
+		context.actions.addTaskTodo(task) ;
+		context.actions.removeTask(task);
 	} }
 	>+</button>;
 

@@ -2,12 +2,9 @@ import config from '../core/config';
 import { rndString } from '@laufire/utils/random';
 
 const addTodo = (todos, input) =>
-	({
-		todos: todos.concat({ id: rndString(config.refreshIDLength),
-			text: input,
-			isCompleted: false }),
-		input: '',
-	});
+	todos.concat({ id: rndString(config.refreshIDLength),
+		text: input,
+		isCompleted: false });
 
 const toggleTodo = (todos, data) =>
 	todos.map((todo) =>

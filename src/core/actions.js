@@ -5,8 +5,8 @@ const setInput = ({ data }) => ({
 	input: data,
 });
 
-const addTodo = ({ state }) =>
-	TodoManager.addTodo(state.todos, state.input);
+const addTodo = ({ state }) => ({ input: '',
+	todos: TodoManager.addTodo(state.todos, state.input) });
 
 const toggleTodo = ({ state, data }) =>
 	({ todos: TodoManager.toggleTodo(state.todos, data) });
