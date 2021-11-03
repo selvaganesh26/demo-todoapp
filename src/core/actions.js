@@ -35,8 +35,8 @@ const editTodo = ({ state }) => ({
 	),
 });
 
-const setTask = ({ data }) => ({
-	tasks: data,
+const addTask = ({ state, data }) => ({
+	tasks: TaskManager.addTask(state.tasks, data),
 });
 
 const removeTask = ({ state, data }) => ({
@@ -56,7 +56,7 @@ const actions = {
 	setFilter,
 	setEditing,
 	editTodo,
-	setTask,
+	addTask,
 	removeTask,
 	addTaskTodo,
 
