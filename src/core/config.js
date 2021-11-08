@@ -1,7 +1,9 @@
+const milliseconds = 1000;
+const seconds = 5;
+
 const config = {
-	countStart: 0,
-	increment: 1,
-	refreshIDLength: 4,
+	refreshIDLength: 16,
+	tickerDelay: milliseconds * seconds,
 };
 
 export default config;
