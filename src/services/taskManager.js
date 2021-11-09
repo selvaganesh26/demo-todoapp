@@ -18,8 +18,7 @@ const removeTask = (tasks, data) => peek(peek(tasks, 'All tasks')
 	.filter((task) =>
 		task.id !== data.id), 'filtered tasks');
 
-const addTask = (tasks, text) =>
-	(text === '' ? tasks : tasks.concat(getTask(text)));
+const addTask = (tasks, task) => tasks.concat(getTask(task));
 
 const taskManager = () => ({
 	init,
