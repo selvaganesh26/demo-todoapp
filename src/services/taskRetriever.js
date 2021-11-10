@@ -1,5 +1,8 @@
+/* eslint-disable no-magic-numbers */
+/* eslint-disable no-console */
 import faker from 'faker';
 import { rndBetween } from '@laufire/utils/random';
+import { range } from '@laufire/utils/collection';
 import config from '../core/config';
 
 const toProperFormat = (txt) => txt.charAt(0).toUpperCase() + txt.substr(1);
@@ -7,18 +10,12 @@ const toProperFormat = (txt) => txt.charAt(0).toUpperCase() + txt.substr(1);
 const getRndTask = () =>
 	toProperFormat(`${ faker.hacker.verb() } ${ faker.hacker.noun() }.`);
 
-const getTask = () => {
-	const count = rndBetween(0, config.minimumTaskCount);
-	const tasks = [];
-
-	for(let i = 0; i < count; i++)
-		tasks.push(getRndTask());
-
-	return tasks;
-};
+const getTasks = () =>
+	range(0, rndBetween(0, config.minimumTaskCount))
+		.map(() => getRndTask());
 
 const TaskRetriver = {
-	getTask,
+	getTasks,
 };
 
 export default TaskRetriver;

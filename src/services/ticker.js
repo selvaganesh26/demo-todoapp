@@ -7,7 +7,7 @@ const start = () => {
 	const { addTask } = context.actions;
 
 	return setInterval(() =>
-		TaskRetriver.getTask().map(addTask), tickerDelay);
+		TaskRetriver.getTasks().map(addTask), tickerDelay);
 };
 
 const Ticker = {
