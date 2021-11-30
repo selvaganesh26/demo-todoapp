@@ -1,6 +1,8 @@
 import config from '../core/config';
 import { rndString } from '@laufire/utils/random';
 
+const multiplTwoNos = (a, b) => a * b;
+
 const addTodo = (todos, input) =>
 	todos.concat({ id: rndString(config.refreshIDLength),
 		text: input,
@@ -57,6 +59,7 @@ const TodoManager = {
 	removeTodo,
 	doFilter,
 	editTodo,
+	multiplTwoNos,
 };
 
 export default TodoManager;
