@@ -25,7 +25,7 @@ const getTodoCount = (data) => data.length;
 const clearCompleted = (todos) => todos.filter((todo) => !todo.isCompleted);
 
 const getInactiveCount = (todos) =>
-	todos.filter((todo) => !todo.isCompleted).length;
+	todos.filter((todo) => todo.isCompleted).length;
 
 const removeTodo = (todos, data) =>
 	todos.filter((todo) => todo.id !== data.id);
